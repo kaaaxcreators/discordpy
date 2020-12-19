@@ -1,5 +1,4 @@
 import discord
-import os
 from discord.ext import commands
 import keep_alive
 
@@ -7,7 +6,6 @@ import sys, traceback
 
 
 def get_prefix(bot, message):
-    """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
 
     # Notice how you can use spaces in prefixes. Try to keep them simple though.
     prefixes = ['§']
@@ -44,4 +42,4 @@ async def on_ready():
     print(f'Successfully logged in and booted...!')
 
 keep_alive.keep_alive()
-bot.run(os.getenv('TOKEN'), bot=True, reconnect=True)
+bot.run(TOKEN, bot=True, reconnect=True)
