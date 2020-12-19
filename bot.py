@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 import keep_alive
 
@@ -43,4 +44,4 @@ async def on_ready():
     print(f'Successfully logged in and booted...!')
 
 keep_alive.keep_alive()
-bot.run('MzYwODI1OTA5MTE0MTc1NDk4.WcU7UA.vAV-OjsZGKW9oQCvb-Wc9zCJAd8', bot=True, reconnect=True)
+bot.run(os.getenv('TOKEN'), bot=True, reconnect=True)
